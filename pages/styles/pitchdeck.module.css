@@ -1,0 +1,7 @@
+.framing iframe {
+    margin-left: 0% !important;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    width: 100% !important;
+    height: 100% !important;
+}
