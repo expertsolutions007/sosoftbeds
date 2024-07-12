@@ -33,7 +33,7 @@ import {
 } from "./contact.styles";
 import axios from "axios";
 
-const Contact = memo(({ data, content, lang }: any) => {
+const Contact = (({ data, content, lang }: any) => {
   const [width, setWidth]: any = useState("lg");
   const [flow, setFlow]: any = useState(false);
 
@@ -460,4 +460,5 @@ const Contact = memo(({ data, content, lang }: any) => {
     </PDiv>
   );
 });
+
 export default Contact;

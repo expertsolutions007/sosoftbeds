@@ -42,8 +42,8 @@ export default function WorkBox({
       </HeadingBox>
       <ListDiv>
         <List>
-          {content?.map((tags: any) => (
-            <Content check={active}>
+          {content?.map((tags: any,key:any) => (
+            <Content check={active} key={key}>
               <ListItem style={{ color: active == true ? "white" : "gray" }}>
                 {tags?.title}
               </ListItem>

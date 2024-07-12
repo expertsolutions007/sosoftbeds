@@ -20,7 +20,7 @@ import {
   SContainer,
   MovingButton,
 } from "./projects.styles";
-import { Downed, ProjectDowned } from "../carousel/carousel.styles";
+// import { Downed, ProjectDowned } from "../carousel/carousel.styles";
 
 type Images = {
   image: string;
@@ -277,13 +277,13 @@ const Projects = ({ data, content }: any): any => {
           />
         </MovingButton>
         {/* {isInViewport(scrollableDivRef.current[-1])} */}
-        <ProjectDowned
+        {/* <ProjectDowned
           style={{
             transform: lastProjectInView ? "rotate(270deg)" : "rotate(90deg)",
           }}
           className="#section07"
           src="https://narsun.s3.eu-central-1.amazonaws.com/scrr.gif"
-        />
+        /> */}
       </Container>
     </FullBox>
   );

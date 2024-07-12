@@ -39,7 +39,7 @@ export const Slide = styled(Box)({
   width: "250px",
 });
 
-const LogoSlider = memo(({ data }: any) => {
+const LogoSlider = (({ data }: any) => {
   const logos = [
     "https://narsun.s3.eu-central-1.amazonaws.com/Group+19730.png",
     "https://narsun.s3.eu-central-1.amazonaws.com/Group+19729.png",
@@ -114,7 +114,7 @@ const LogoSlider = memo(({ data }: any) => {
         <SliderBox className="slider">
           <SliderTrack className="slide-track">
             {logos.map((image, index) => (
-              <Slide className="slide">
+              <Slide key={index} className="slide">
                 <img src={image} height="100" width="250" alt="" />
               </Slide>
             ))}

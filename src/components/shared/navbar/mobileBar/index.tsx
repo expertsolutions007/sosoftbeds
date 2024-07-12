@@ -1,4 +1,4 @@
-import { NarsunImage } from "../navbar.styles";
+// import { NarsunImage } from "../navbar.styles";
 import { NarsunLogo } from "./navbar.mobileBar.styles";
 import { links, links as menues } from "../data/mobilelinks";
 import { useEffect, useState } from "react";
@@ -12,7 +12,7 @@ import Typography from "@mui/material/Typography";
 import theme from "../../../../theme";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { useDispatch } from "react-redux";
-import { setNavbar } from "../../../../../slice";
+// import { setNavbar } from "../../../../../slice";
 
 import {
   List,
@@ -284,13 +284,13 @@ export default function MobileBar({ changeSelection, lang }: any) {
               />
             </IconButton>
           </Toolbar>
-
+{/*
           <NarsunLogo theme={theme} href="/">
             <NarsunImage
               src={"https://narsun.s3.eu-central-1.amazonaws.com/logofied.png"}
               alt="Narsun Logo"
             />
-          </NarsunLogo>
+          </NarsunLogo> */}
         </Container>
       </AppBar>
       <Box component="nav">

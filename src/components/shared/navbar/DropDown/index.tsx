@@ -15,7 +15,6 @@ import theme from "../../../../theme";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { menu as menues } from "../data/data"
-import { setNavbar } from "../../../../../slice";
 
 export const PositionedMenu: FC<IDropDown> = ({
   name,
@@ -51,24 +50,6 @@ export const PositionedMenu: FC<IDropDown> = ({
   const enableButton = () => {
     setDisable(false);
   };
-
-  useEffect(() => {
-    if (window.location.href.includes("expertise")) {
-      menues.map((meta: any) => {
-        meta?.data?.map((min: any) => {
-          if (lang === "ar") {
-            if (min?.name == selector.navbar) {
-              dispatch(setNavbar(min?.arName));
-            }
-          } else {
-            if (min?.arName == selector.navbar) {
-              dispatch(setNavbar(min?.name));
-            }
-          }
-        })
-      })
-    }
-  }, [lang])
 
   return (
     <>
@@ -186,9 +167,10 @@ export const PositionedMenu: FC<IDropDown> = ({
         theme={theme}
       >
         <DropDownMenuItem theme={theme} name={name}>
-          {data?.map((dat: any) => (
+          {data?.map((dat: any,key:any) => (
             <BoxDropDownItem
               theme={theme}
+              key={key}
               onClick={() => setSelector(event, lang == "ar" ? dat.arName : dat.name)}
             >
               <DropDownButton

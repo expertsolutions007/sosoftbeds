@@ -15,7 +15,7 @@ import {
   WorkFlowBox,
 } from "./workflow.styles";
 
-const Workflow = memo(({ data, content,lang }: any) => {
+const Workflow = (({ data, content,lang }: any) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [width, setWidth]: any = useState("lg");
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const handleResize = () => {
+const HandleResize = () => {
   const [width, setWidth]: any = useState("md");
   const [mobileMenu, setMobile]: any = useState(false);
 
@@ -24,4 +24,4 @@ const handleResize = () => {
   return { width, mobileMenu };
 };
 
-export default handleResize;
+export default HandleResize;

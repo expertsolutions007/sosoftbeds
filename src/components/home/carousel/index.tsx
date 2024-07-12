@@ -51,8 +51,8 @@ export const Carousel: any = (props: any) => {
   return (
     <PDiv>
       <Slider {...settings}>
-        {BannerData.map((i) =>
-          <CDiv background={i.img}>
+        {BannerData.map((i,key) =>
+          <CDiv background={i.img} key={key}>
             <CWrap>
             <Title>{i.title}</Title>
             <Description>{i.description}</Description>
