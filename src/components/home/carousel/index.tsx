@@ -59,6 +59,7 @@ export const Carousel: any = (props: any) => {
             <Explore>Explore Now</Explore>
             </CWrap>
           </CDiv>
+
         )}
       </Slider>
     </PDiv>
