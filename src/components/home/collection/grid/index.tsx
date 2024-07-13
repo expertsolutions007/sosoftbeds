@@ -11,7 +11,7 @@ export default function Grid() {
     return (
         <PDiv>
             {bigGrids.map((g, i) =>
-                <CDiv order={g.order} theme={theme}>
+                <CDiv order={g.order} theme={theme} key={i}>
                     <Image src={g.img} height={g.height} />
                     <Heading>{g.title}</Heading>
                 </CDiv>)}

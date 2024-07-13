@@ -18,9 +18,10 @@ export default function Cards() {
     return (
         <PDiv>
             {cards.map((g, i) =>
-                <CDiv theme={theme}>
+                <CDiv theme={theme} key={i}>
                     <CustomCard sx={{}}>
                         <CustomCardMedia
+                            //@ts-ignore
                             component="img"
                             height="194"
                             image={g.img}

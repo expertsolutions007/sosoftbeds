@@ -2,6 +2,10 @@ import { Height } from "@mui/icons-material";
 import { styled } from "@mui/material";
 import { heIL } from "@mui/material/locale";
 
+interface CDivProps {
+    order: string;
+}
+
 export const PDiv = styled("div")(({ theme }) => ({
     display: "grid",
     height: "750px",
@@ -33,7 +37,7 @@ export const PFlex = styled("div")(({ theme }) => ({
     [theme.breakpoints.up("xs")]: {},
 }))
 
-export const CDiv = styled("div")(({ theme, order }: any) => ({
+export const CDiv = styled("div")<CDivProps>(({ theme, order }: any) => ({
     position: "relative",
     gridArea: order,
     display: "flex",
